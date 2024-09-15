@@ -1,15 +1,161 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face {
+    font-family:font1 ;
+    src: url(./font/plain-light-webfont.woff);
+}
+@font-face {
+    font-family:font2 ;
+    src: url(./font/plain-regular-webfont.woff);
+}
+@font-face {
+    font-family:font3 ;
+    src: url(./font/silkserif-lightitalic-webfont.woff);
+}
+@font-face {
+    font-family:font4 ;
+    src: url(./font/silkserif-regularitalic-webfont.woff);
 }
 
-html,body{
-    height: 100%;
-    width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-main{
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: font1;
+  overflow-x: hidden;
+
 }
+
+main {
+  position: relative;
+  width: 100%;
+  background-color: #0b0b0b;
+  color: #fff;
+  cursor: none;
+}
+
+.cursor{
+    position: absolute;
+    z-index: 99999;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    pointer-events: none;
+}
+
+.loader {
+    display: none;
+  position: fixed;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  background-color: #0b0b0b;
+    padding: 8vw 6vw;
+  color: #fff;
+}
+
+.loader-container{
+    line-height: 105px;
+}
+
+.loader h1{
+    font-size: 7.2vw;
+    font-family: font1;
+    font-weight: 700;
+    margin-bottom: .4vw;
+}
+
+.loader span{
+    font-family: font3;
+    font-weight: 100;
+}
+.loader h1 span{
+    font-family: font1;
+    font-weight: 900;
+    opacity: 1;
+}
+
+.loader .counter{
+    margin-left: 3vw;
+    width: 5vw;
+}
+
+.loader .text-container{
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: self-start;
+    gap: 6vw;
+}
+
+.text-content-bottom {
+    padding: 5vw ;
+}
+
+.text-content-bottom p{
+    font-size: 15px;
+    margin-left: 18vw;
+}
+
+.text-container h4, .text-container h5{
+    font-family: font3;
+    font-weight: 100;
+    font-size: 3vw;
+}
+
+.text-container h5{
+    text-align: right;
+}
+
+.counter-container{
+    display: flex;
+    gap: 10px;
+}
+
+.page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #151515;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding:3.6vw 5vw;
+    
+}
+
+.nav-left{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-left-1{
+    width: 80%;
+    display: flex;
+}
+
+.nav-left p{
+    font-size: 14px;
+}
+
+.nav-right{
+    display: flex;
+    justify-content: center;
+    gap: 2.6vw;
+}
+
+.nav-right a{
+    font-size: 14px;
+    cursor: none;
+    text-decoration: none;
+    color: #fff;
+}
+
