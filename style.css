@@ -186,7 +186,7 @@ nav{
     font-family: font2;
     font-weight: 100;
     font-size: 7.5vw;
-    line-height: 104px;
+    line-height: 7.5vw;
 
 }
 
@@ -355,7 +355,7 @@ nav{
 }
 
 .page5{
-    height: 40vw;
+    height: 95vh;
     width: 100%;
     background-color: #151515;
 }
@@ -369,7 +369,8 @@ nav{
     display: flex;
     align-items: center;
     white-space: nowrap;
-    line-height: 110px;
+    line-height: 115px;
+    animation: scroll 10s linear infinite;
 }
 
 .infinty-text h1{
@@ -383,6 +384,62 @@ nav{
     font-family: font3;
     font-weight: 100;
 }
+
+.scroll-left {
+    animation: scroll-left 15s linear infinite;
+  }
+
+  .scroll-right {
+    animation: scroll-right 15s linear infinite;
+  }
+
+.page6{
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    background-color: #151515;
+
+}
+
+.page6-container{
+    position: relative;
+    height: 100%;
+    width: 77%;
+    padding: 2vw 5vw;
+}
+
+.page6-top-heading{
+    width: 100%;
+    padding: 5vw 0vw;
+    border-bottom: 1px solid #fff;
+}
+
+.page6-heading-text{
+    height: fit-content;
+}
+
+.page6-heading-text h1{
+    font-size: 7.5vw;
+}
+
+@keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
 
 
 
