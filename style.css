@@ -27,7 +27,7 @@ body {
   width: 100%;
   font-family: font1;
   overflow-x: hidden;
-    /* scrollbar-width: none; */
+    scrollbar-width: none;
 }
 
 main {
@@ -197,15 +197,196 @@ nav{
 
 .split-text{
     text-decoration: underline 8px;
-    text-underline-offset: 10px;
-    height: fit-content;
+    transition:  linear all .3s;
 }
 
 .split-text:hover{
     color: transparent;
     -webkit-text-stroke: 1px #fff;
     text-decoration: none;
-    transition:  linear all .2s;
+    transition:  linear all .28s;
 }
+
+.page2{
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    background-color: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.page2 .page2-video{
+    position: relative;
+    height: 35vw;
+    width:70% ;
+}
+
+.page2-video video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.page2-video img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
+
+.page4{
+    /* height: 100vh; */
+    width: 100%;
+    background-color: #151515;
+    display: flex;
+    justify-content: end;
+}
+
+.page4-container{
+    position: relative;
+    height: 100%;
+    width: 77%;
+    padding: 2vw 5vw;
+}
+
+.page4-top-heading{
+    width: 100%;
+    padding: 5vw 0vw;
+    border-bottom: 1px solid #fff;
+}
+
+.page4-heading-text{
+    height: fit-content;
+}
+
+.page4-heading-text h1{
+    font-size: 7.5vw;
+}
+
+.about-discription{
+    padding: 4vw 0;
+}
+
+.about-discription p{
+    font-size: 32px;
+}
+
+.page4-image{
+    display: flex;
+    
+}
+
+.page4-img-container{
+    height: 40vw;
+    width: 33vw;
+
+}
+
+.page4-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.page4-img-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    padding: 0 30px;
+}
+
+.page4-img-text p{
+    font-size: 13.2px;
+    line-height: 22px;
+}
+
+.page4-awords{
+    position: absolute;
+    top: 56%;
+    left: 36%;
+    background-color: #3f7df4;
+    height: 42vw;
+    width: 33vw;
+    padding: 3vw 3.5vw;
+}
+
+.page4-awords-text{
+    display: flex;
+    width: 100%;
+    padding: 2.3vw 0;
+    border-bottom: 2px solid #ffffff6a;
+}
+
+.page4-awords-text h3{
+    width: 60%;
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.page4-awords-text h4{
+    width: 40%;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.page4-emptyContainer{
+    height: 39vw;
+    width: 100%;
+    background-color: #151515;
+    border-bottom: 1.6px solid #fff;
+}
+
+.page4-emptyContainer2{
+    padding: 20px 0;
+}
+
+.page4-emptyContainer2 p{
+    font-size: 14px;
+}
+
+.page5{
+    height: 40vw;
+    width: 100%;
+    background-color: #151515;
+}
+
+.infinite-scroll{
+    padding: 3vw 0 ;
+
+}
+
+.infinty-text{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    line-height: 110px;
+}
+
+.infinty-text h1{
+    font-size: 7.6vw;
+    font-weight: 100;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+
+.infinty-text span{
+    font-family: font3;
+    font-weight: 100;
+}
+
+
+
+
+
 
 

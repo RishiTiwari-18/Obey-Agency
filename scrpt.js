@@ -131,3 +131,38 @@ function cursor(){
     
 }
 cursor()
+
+function videoAnimation(){
+    document.addEventListener('DOMContentLoaded', () => {
+        const image = document.getElementById('toggleImage');
+        const video = document.getElementById('video');
+    
+        const toggleVideo = () => {
+            if (video.paused) {
+                video.play();
+                video.muted = false;
+                gsap.to(image,{
+                    opacity:0,
+                    duration:.3,
+                    display: "none",
+                })
+            } else {
+                video.pause();
+                video.muted = true;
+               gsap.to(image,{
+                    opacity:1,
+                    duration: .3,
+                    display: "block",
+    
+                })
+            }
+        };
+    
+        image.addEventListener('click', toggleVideo);
+        video.addEventListener('click', toggleVideo);
+    });
+    
+}
+
+videoAnimation()
+
