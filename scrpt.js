@@ -108,16 +108,26 @@ function loadingPage(){
         ease: "power4.out",
         duration:1,
     })
+
+    .from(".page1-text-container h1",{
+        y: "100%",
+        duration:.5,
+        stagger:.1,
+    }, "-=0.7")
 }
 
 loadingPage()
 
-window.addEventListener("mousemove", function(e){
-    console.log(e);
-    
-    gsap.to(".cursor",{
-        x: e.pageX - 35/2 + "px",
-        y: e.pageY - 35/2 + "px",
-        duration:0.1
+function cursor(){
+    window.addEventListener("mousemove", function(e){
+        console.log(e);
+        
+        gsap.to(".cursor",{
+            x: e.pageX - 35/2 + "px",
+            y: e.pageY - 35/2 + "px",
+            duration:0.1
+        })
     })
-})
+    
+}
+cursor()

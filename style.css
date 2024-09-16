@@ -27,7 +27,7 @@ body {
   width: 100%;
   font-family: font1;
   overflow-x: hidden;
-
+    /* scrollbar-width: none; */
 }
 
 main {
@@ -40,7 +40,7 @@ main {
 
 .cursor{
     position: absolute;
-    z-index: 99999;
+    z-index: 99;
     height: 35px;
     width: 35px;
     border-radius: 50%;
@@ -49,7 +49,7 @@ main {
 }
 
 .loader {
-    display: none;
+    cursor: none;
   position: fixed;
   z-index: 999;
   height: 100%;
@@ -61,6 +61,7 @@ main {
 
 .loader-container{
     line-height: 105px;
+
 }
 
 .loader h1{
@@ -100,6 +101,7 @@ main {
 .text-content-bottom p{
     font-size: 15px;
     margin-left: 18vw;
+    height: fit-content;
 }
 
 .text-container h4, .text-container h5{
@@ -140,6 +142,14 @@ nav{
 .nav-left-1{
     width: 80%;
     display: flex;
+    gap: 3vw;
+}
+
+.nav-left-container{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
 }
 
 .nav-left p{
@@ -158,4 +168,44 @@ nav{
     text-decoration: none;
     color: #fff;
 }
+
+.page1-container-container{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4vw;
+}
+
+.page1-container{
+    padding-left: 9vw;
+}
+
+.page1-container h1{
+    font-family: font2;
+    font-weight: 100;
+    font-size: 7.5vw;
+    line-height: 104px;
+
+}
+
+.page1-text-container{
+    height: fit-content;
+    overflow: hidden;
+}
+
+.split-text{
+    text-decoration: underline 8px;
+    text-underline-offset: 10px;
+    height: fit-content;
+}
+
+.split-text:hover{
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    text-decoration: none;
+    transition:  linear all .2s;
+}
+
 
