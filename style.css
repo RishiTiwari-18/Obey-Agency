@@ -33,7 +33,7 @@ body {
 main {
   position: relative;
   width: 100%;
-  background-color: #0b0b0b;
+  background-color: #151515;
   color: #fff;
   cursor: none;
 }
@@ -179,6 +179,7 @@ nav{
 }
 
 .page1-container{
+    position: relative;
     padding-left: 9vw;
 }
 
@@ -195,6 +196,16 @@ nav{
     overflow: hidden;
 }
 
+.page1-container::before{
+    position: absolute;
+    content: "01";
+    font-family: font3;
+    font-weight: 100;
+    font-size: 3.3vw;
+    left: 0%;
+    top: 0%;
+}
+
 .split-text{
     text-decoration: underline 8px;
     transition:  linear all .3s;
@@ -207,9 +218,13 @@ nav{
     transition:  linear all .28s;
 }
 
+.magnet{
+    transition: transform 0.6s ease-out;
+}
+
 .page2{
     position: relative;
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     background-color: #151515;
     display: flex;
@@ -269,7 +284,18 @@ nav{
 }
 
 .page4-heading-text h1{
+    position: relative;
     font-size: 7.5vw;
+}
+
+.page4-heading-text h1::before{
+    position: absolute;
+    content: "03";
+    font-family: font3;
+    font-weight: 100;
+    font-size: 3.3vw;
+    left: -15%;
+    top: 10%;
 }
 
 .about-discription{
@@ -315,8 +341,8 @@ nav{
     top: 56%;
     left: 36%;
     background-color: #3f7df4;
-    height: 42vw;
-    width: 33vw;
+    min-height: 42vw;
+    width: 32vw;
     padding: 3vw 3.5vw;
 }
 
@@ -329,13 +355,13 @@ nav{
 
 .page4-awords-text h3{
     width: 60%;
-    font-size: 22px;
+    font-size: 1.6vw;
     font-weight: 100;
 }
 
 .page4-awords-text h4{
     width: 40%;
-    font-size: 14px;
+    font-size: 1vw;
     font-weight: 100;
 }
 
@@ -386,11 +412,11 @@ nav{
 }
 
 .scroll-left {
-    animation: scroll-left 18s linear infinite;
+    animation: scroll-left 30s linear infinite;
   }
 
   .scroll-right {
-    animation: scroll-right 18s linear infinite;
+    animation: scroll-right 30s linear infinite;
   }
 
 .page6{
@@ -416,12 +442,47 @@ nav{
 }
 
 .page6-heading-text{
-    height: fit-content;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .page6-heading-text h1{
     font-size: 7.5vw;
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    gap: 2px;
 }
+
+.page6-split-text{
+    margin-left: 1.8vw;
+}
+
+.page6-top-heading svg{
+    margin-left: 3vw;
+}
+
+
+
+.page6-heading-text h1::before{
+    position: absolute;
+    content: "04";
+    font-family: font3;
+    font-weight: 100;
+    font-size: 3.3vw;
+    left: -15%;
+    top: 10%;
+}
+
+
+
+.page6-heading-text svg{
+    height: 5vw;
+}
+
+
 
 .page6-center{
     padding: 7vw 0vw;
@@ -444,12 +505,41 @@ nav{
     margin-bottom: 24px;
 }
 
+.page6-center-text h3 div{
+    position: relative;
+    transition: all linear .32s;
+
+}
+
 .page6-center-text h3{
+    height: 26px;
+    overflow: hidden;
+    width: fit-content;
+    position: relative;
     font-family: font1;
     font-size: 24px;
+    display: flex;
+    flex-direction: column;
     font-weight: 100;
     line-height: 26px;
 }
+
+.page6-center-text h3:hover div{
+    transform: translateY(-105%);
+
+}
+
+.page6-center-text h3 .span{
+    position: absolute;
+    left: 0%;
+    top: 100%;
+}
+
+.info-obys{
+    text-decoration: underline 2px;
+}
+
+
 
 .page6-bottom{
     padding: 30px 0;
@@ -465,13 +555,13 @@ nav{
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-160%);
     }
   }
   
   @keyframes scroll-right {
     0% {
-      transform: translateX(-100%);
+      transform: translateX(-160%);
     }
     100% {
       transform: translateX(0%);

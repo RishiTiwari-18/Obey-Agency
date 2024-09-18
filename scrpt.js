@@ -119,9 +119,7 @@ function loadingPage(){
 loadingPage()
 
 function cursor(){
-    window.addEventListener("mousemove", function(e){
-        console.log(e);
-        
+    window.addEventListener("mousemove", function(e){        
         gsap.to(".cursor",{
             x: e.pageX - 35/2 + "px",
             y: e.pageY - 35/2 + "px",
@@ -166,3 +164,115 @@ function videoAnimation(){
 
 videoAnimation()
 
+function locomotive(){
+    gsap.registerPlugin(ScrollTrigger);
+    const locoScroll = new LocomotiveScroll({
+      el: document.querySelector("main"),
+      smooth: true
+    });
+    locoScroll.on("scroll", ScrollTrigger.update);
+    
+    ScrollTrigger.scrollerProxy("main", {
+      scrollTop(value) {
+        return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+      }, 
+      getBoundingClientRect() {
+        return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+      },
+      pinType: document.querySelector("main").style.transform ? "transform" : "fixed"
+    });
+    
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    ScrollTrigger.refresh();
+    
+}
+
+locomotive()
+
+
+function magnetEffect(){
+    document.addEventListener('DOMContentLoaded', () => {
+        const magnets = document.querySelectorAll('.magnet');
+        const magnetStrength = 200; 
+        magnets.forEach(magnet => {
+            magnet.addEventListener('mousemove', (e) => {
+                const rect = magnet.getBoundingClientRect();
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+                const centerX = rect.left + rect.width / 4;
+                const centerY = rect.top + rect.height / 4;
+                const deltaX = mouseX - centerX;
+                const deltaY = mouseY - centerY;
+                const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+                const force = Math.min(magnetStrength / distance, 2);
+                magnet.style.transform = `translate(${deltaX * force}px, ${deltaY * force}px)`;
+            });
+    
+            magnet.addEventListener('mouseleave', () => {
+                magnet.style.transform = 'translate(0, 0)';
+            });
+        });
+    });
+    
+}
+
+magnetEffect()
+
+
+function textAnimation(){
+    let textSix = document.querySelector(".page6-heading-text")
+
+textSix.addEventListener("mouseenter", function(){
+    let tl = gsap.timeline()
+
+    tl.to(".page6-heading-text h1 span",{
+        opacity: 0,
+        stagger:.02,
+        duration: .15
+    })
+
+    tl.to(".page6-heading-text h1 span",{
+        fontFamily: "font3",
+        webkitTextStroke: "1px #fff",
+        stagger:.01,
+        color: "transparent"
+    },"-=.6" )
+
+    tl.to(".page6-heading-text h1 span",{
+        opacity: 1,
+        duration:.15,
+        ease:"power3.out",
+        stagger:.02
+    }, "-=.08")
+
+
+
+
+
+
+})
+
+textSix.addEventListener("mouseleave", function(){
+    tl.to(".page6-heading-text h1 span",{
+        opacity: 0,
+        stagger:.02,
+        duration: .15
+    })
+
+    tl.to(".page6-heading-text h1 span",{
+        fontFamily: "font1",
+        webkitTextStroke: "0px #fff",
+        stagger:.01,
+        color: "#fff"
+    },"-=.6" )
+
+    tl.to(".page6-heading-text h1 span",{
+        opacity: 1,
+        duration:.15,
+        ease:"power3.out",
+        stagger:.02
+    }, "-=.08")
+})
+}
+
+textAnimation()

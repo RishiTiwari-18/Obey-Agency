@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Obys Agency</title>
   </head>
@@ -36,12 +38,13 @@
     <div class="cursor"></div>
 
     <main>
-      <div class="page1">
+      <div class="page1" data-scroll>
         <nav>
           <div class="nav-left">
             <div class="nav-left-1">
               <div class="nav-left-container">
-                <svg
+                <div class="magnet">
+                  <svg
                   class="menu-opener__square"
                   width="12"
                   height="12"
@@ -82,6 +85,7 @@
                   ></rect>
                   <rect x="10" width="2" height="2" fill="currentColor"></rect>
                 </svg>
+                </div>
                 <svg
                   class="brand__svg"
                   width="71"
@@ -142,14 +146,14 @@
           </div>
 
           <div class="nav-right">
-            <a href="#">Works</a>
-            <a href="#">About</a>
-            <a href="#">Contacts</a>
+            <a class="magnet" href="#">Works</a>
+            <a class="magnet" href="#">About</a>
+            <a class="magnet" href="#">Contacts</a>
           </div>
         </nav>
 
         <div class="page1-container-container">
-          <div class="page1-container">
+          <div class="page1-container" data-scroll data-scroll-speed="2">
             <div class="page1-text-container">
               <h1>WE DESIGN</h1>
             </div>
@@ -169,8 +173,8 @@
           </div>
         </div>
       </div>
-      <div class="page2">
-        <div class="page2-video">
+      <div class="page2" data-scroll>
+        <div class="page2-video" data-scroll data-scroll-speed=".5">
           <img
             id="toggleImage"
             src="https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg"
@@ -185,9 +189,9 @@
         </div>
       </div>
 
-      <div class="page3"></div>
+      <div class="page3" data-scroll></div>
 
-      <div class="page4">
+      <div class="page4" data-scroll>
         <div class="page4-container">
           <div class="page4-top-heading">
             <div class="page4-heading-text">
@@ -256,65 +260,95 @@
         </div>
       </div>
 
-      <div class="page5">
+      <div class="page5" data-scroll>
         <div class="infinite-scroll">
           <div class="infinty-text scroll-left">
-            <h1>FASHION — <span>SPORT</span> — TECHNOLOGY — </h1>
-            <h1><span>FASHION</span> — SPORT — <span>TECHNOLOGY</span> — </h1>
+            <h1>FASHION — <span>SPORT</span> — TECHNOLOGY —</h1>
+            <h1><span>FASHION</span> — SPORT — <span>TECHNOLOGY</span> —</h1>
           </div>
           <div class="infinty-text scroll-right">
             <h1>ARCHITECTURE — <span>BEAUTY</span> — REAL ESTATE —</h1>
-            <h1><span>ARCHITECTURE</span> — BEAUTY — <span>REAL ESTATE</span> —</h1>
+            <h1>
+              <span>ARCHITECTURE</span> — BEAUTY — <span>REAL ESTATE</span> —
+            </h1>
           </div>
           <div class="infinty-text scroll-left">
-            <h1>TRAVEL — <span>SCIENCE</span> — PARTNERS — </h1>
-            <h1><span>TRAVEL</span> — SCIENCE — <span>PARTNERS</span> — </h1>
+            <h1>TRAVEL — <span>SCIENCE</span> — PARTNERS —</h1>
+            <h1><span>TRAVEL</span> — SCIENCE — <span>PARTNERS</span> —</h1>
           </div>
-          <div class="infinty-text scroll-right ">
-            <h1>HOTELS — <span>MUSIC</span> — AUTOMOTIVE — </h1>
-            <h1><span>HOTELS</span> — MUSIC — <span>AUTOMOTIVE</span> — </h1>
+          <div class="infinty-text scroll-right">
+            <h1>HOTELS — <span>MUSIC</span> — AUTOMOTIVE —</h1>
+            <h1><span>HOTELS</span> — MUSIC — <span>AUTOMOTIVE</span> —</h1>
           </div>
         </div>
       </div>
 
-      <div class="page6">
-       <div class="page6-container">
-        <div class="page6-top-heading">
+      <div class="page6" data-scroll>
+        <div class="page6-container">
+          <div class="page6-top-heading">
             <div class="page6-heading-text">
-              <h1>LET'S CREATE</h1>
+              <h1>
+                <span>L</span>
+                <span>E</span>
+                <span>T</span>
+                <span>'</span>
+                <span>S</span>
+                <span  class="page6-split-text">C</span>
+                <span>R</span>
+                <span>E</span>
+                <span>A</span>
+                <span>T</span>
+                <span>E</span>
+                <svg
+                  class="entry-title__arrow"
+                  viewBox="0 0 118 91"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M57.295 75.1963L56.5879 74.4892L55.8808 75.1963L56.5879 75.9034L57.295 75.1963ZM77.0457 55.4457L77.7528 56.1528L79.4599 54.4457L77.0457 54.4457L77.0457 55.4457ZM72.3742 90.2755L71.6671 90.9826L72.3742 91.6897L73.0813 90.9826L72.3742 90.2755ZM117.513 45.1371L118.22 45.8442L118.927 45.1371L118.22 44.4299L117.513 45.1371ZM102.433 30.0578L103.141 29.3507L102.433 28.6431L101.726 29.3512L102.433 30.0578ZM102.433 30.0585L101.726 30.7656L102.433 31.4732L103.14 30.7651L102.433 30.0585ZM72.3743 9.86531e-07L73.0814 -0.707106L72.3743 -1.41421L71.6672 -0.707106L72.3743 9.86531e-07ZM57.2951 15.0792L56.588 14.3721L55.8809 15.0792L56.588 15.7863L57.2951 15.0792ZM76.3363 34.1205L76.3363 35.1205L78.7506 35.1205L77.0434 33.4134L76.3363 34.1205ZM-4.50306e-05 34.1205L-4.50525e-05 33.1205L-1.00005 33.1205L-1.00005 34.1205L-4.50306e-05 34.1205ZM-4.45646e-05 55.4457L-1.00004 55.4457L-1.00004 56.4457L-4.45427e-05 56.4457L-4.45646e-05 55.4457ZM58.0021 75.9034L77.7528 56.1528L76.3385 54.7386L56.5879 74.4892L58.0021 75.9034ZM73.0813 89.5684L58.0021 74.4892L56.5879 75.9034L71.6671 90.9826L73.0813 89.5684ZM116.806 44.4299L71.6671 89.5684L73.0813 90.9826L118.22 45.8442L116.806 44.4299ZM101.726 30.765L116.806 45.8442L118.22 44.4299L103.141 29.3507L101.726 30.765ZM103.14 30.7651L103.141 30.7645L101.726 29.3512L101.725 29.3519L103.14 30.7651ZM103.14 29.3514L73.0814 -0.707106L71.6672 0.707108L101.726 30.7656L103.14 29.3514ZM71.6672 -0.707106L56.588 14.3721L58.0022 15.7863L73.0814 0.707108L71.6672 -0.707106ZM56.588 15.7863L75.6292 34.8276L77.0434 33.4134L58.0022 14.3721L56.588 15.7863ZM76.3363 33.1205L-4.50525e-05 33.1205L-4.50088e-05 35.1205L76.3363 35.1205L76.3363 33.1205ZM-1.00005 34.1205L-1.00004 55.4457L0.999955 55.4457L0.999955 34.1205L-1.00005 34.1205ZM-4.45427e-05 56.4457L77.0457 56.4457L77.0457 54.4457L-4.45864e-05 54.4457L-4.45427e-05 56.4457Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </h1>
             </div>
           </div>
 
-        <div class="page6-center">
+          <div class="page6-center">
             <div class="page6-center-container">
-                <div class="page6-center-text">
-                    <h4>Social</h4>
-                    <h3>Dribbble</h3>
-                    <h3>Behance</h3>
-                    <h3>Instagram</h3>
-                    <h3>Facebook</h3>
-                    <h3>Twitter</h3>
-                    <h3>YouTube</h3>
-                </div>
-                <div class="page6-center-text">
-                    <h4>Address</h4>
-                    <h3>Zamarstynivska 55</h3>
-                    <h3>79019 Lviv</h3>
-                    <h3>Ukraine</h3>
-                </div>
-                <div class="page6-center-text">
-                    <h4>Say Hi!</h4>
-                    <h3>info@obys.agency</h3>
-                </div>
-            </div>
-        </div>
+              <div class="page6-center-text">
+                <h4>Social</h4>
+                <h3><div><span>Dribbble</span><span class="span">Dribbble</span></div></h3>
+                <h3><div><span>Behance</span><span class="span">Behance</span></div></h3>
+                <h3><div><span>Instagram</span><span class="span">Instagram</span></div></h3>
+                <h3><div><span>Facebook</span><span class="span">Facebook</span></div></h3>
+                <h3><div><span>Twitter</span><span class="span">Twitter</span></div></h3>
+                <h3><div><span>YouTube</span><span class="span">YouTube</span></div></h3>
 
-        <div class="page6-bottom">
+              </div>
+              <div class="page6-center-text">
+                <h4>Address</h4>
+                <h3><div><span>Zamarstynivska 55</span><span class="span">Zamarstynivska 55</span></div></h3>
+                <h3><div><span>79019 Lviv</span><span class="span">79019 Lviv</span></div></h3>
+                <h3><div><span>Ukraine</span><span class="span">Ukraine</span></div></h3>
+              </div>
+              <div class="page6-center-text">
+                <h4>Say Hi!</h4>
+                <h3><div><span class="info-obys">Info@obys.agency</span><span class="span info-obys">Info@obys.agency</span></div></h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="page6-bottom">
             <h4>Obys Agency © 2024</h4>
+          </div>
         </div>
       </div>
-       </div>
     </main>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -328,6 +362,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
     <script src="scrpt.js"></script>
   </body>
 </html>
