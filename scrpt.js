@@ -227,8 +227,10 @@ textSix.addEventListener("mouseenter", function(){
 
     tl.to(".page6-heading-text h1 span",{
         opacity: 0,
-        stagger:.02,
-        duration: .15
+        stagger:.025,
+        duration: .16,
+        ease:"power2.out",
+
     })
 
     tl.to(".page6-heading-text h1 span",{
@@ -240,10 +242,10 @@ textSix.addEventListener("mouseenter", function(){
 
     tl.to(".page6-heading-text h1 span",{
         opacity: 1,
-        duration:.15,
-        ease:"power3.out",
-        stagger:.02
-    }, "-=.08")
+        duration:.16,
+        ease:"power2.out",
+        stagger:.025
+    }, "-=.1")
 
 
 

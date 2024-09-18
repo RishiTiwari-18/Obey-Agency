@@ -505,6 +505,8 @@ nav{
     margin-bottom: 24px;
 }
 
+
+
 .page6-center-text h3 div{
     position: relative;
     transition: all linear .32s;
@@ -520,6 +522,13 @@ nav{
     font-size: 24px;
     display: flex;
     flex-direction: column;
+    font-weight: 100;
+    line-height: 26px;
+}
+
+.page6-center-text h5{
+    width: fit-content;
+    font-size: 24px;
     font-weight: 100;
     line-height: 26px;
 }
