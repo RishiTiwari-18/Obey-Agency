@@ -53,6 +53,7 @@ img, video {
     backface-visibility: hidden;
 }
 
+
 .loader {
     cursor: none;
   position: fixed;
@@ -220,7 +221,7 @@ nav{
     color: transparent;
     -webkit-text-stroke: 1px #fff;
     text-decoration: none;
-    transition:  linear all .28s;
+    text-decoration-thickness: 0;
 }
 
 .magnet{
@@ -241,6 +242,8 @@ nav{
     position: relative;
     height: 35vw;
     width:70% ;
+    overflow: hidden;
+
 }
 
 .page2-video video{
@@ -253,6 +256,7 @@ nav{
     position: absolute;
     top: 0;
     left: 0;
+    object-fit: cover;
     height: 100%;
     width: 100%;
 }
@@ -293,7 +297,7 @@ nav{
 
 .page3-heading-text h1::before{
     position: absolute;
-    content: "03";
+    content: "02";
     font-family: font3;
     font-weight: 100;
     font-size: 3.3vw;
@@ -314,7 +318,11 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.text-underline{
     border-bottom: 1px solid #fff;
+
 }
 
 .page3-text-div h2{
@@ -349,7 +357,9 @@ nav{
     flex-shrink: 0;
 }
 
-
+.top-image{
+    z-index: 99999;
+}
 
 .page3-image-div:nth-child(1){
     height: 44vw;
@@ -372,6 +382,18 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+}
+
+.page3-circle:hover .circle-innerdiv{
+    scale: 1;
+}
+
+.page3-circle:hover p{
+    scale: 1;
+    transition: all ease .3s;
+    transition-delay: .35s;
 }
 
 .page3-circle svg{
@@ -384,13 +406,56 @@ nav{
     margin-left: 25%;
 }
 
+.circle-innerdiv p{
+    scale: 0;
+}
+
+.circle-innerdiv{
+    transition: all ease-out .3s;
+    scale: 0;
+    z-index: 99;
+    color: black;
+    height: 100%;
+    width: 100%;
+    letter-spacing: .3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+}
+
 .circle2{
     margin-top: -10%;
+}
+
+.circle2 svg{
+    rotate: -45deg;
 }
 
 .circle3{
     margin-top: 100%;
     margin-left: 25%;
+}
+
+.circle3 svg{
+    rotate: -90deg;
+}
+
+.page3-projects-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-button{
+    
 }
 
 
@@ -712,6 +777,171 @@ nav{
       transform: translateX(0%);
     }
   }
+
+
+
+  @media (max-width: 600px) {
+
+      
+      nav{
+          padding:5vw 6vw;
+
+      }
+      
+      .nav-left{
+          width: 100%;
+      }
+      
+      .nav-left-1{
+          width: 100%;
+      }
+
+      .nav-left-2{
+        display: none;
+      }
+      
+      .nav-left-container{
+          width: 100%;
+          justify-content: space-between;
+      } 
+      .nav-right{
+        display: none;
+      }
+
+      .page1{
+        height: fit-content;
+      }
+      
+      .page1-container-container{
+          height: 45%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: start;
+          padding: 16vw 4vw;
+          margin-top: 8vh;
+      }
+      
+      .page1-container{
+          padding-left: 2vw;
+      }
+      
+      .page1-container h1{
+          font-size: 11.5vw;
+          line-height: 12.5vw;
+      
+      }
+      
+      .page1-container::before{
+          font-size: 6vw;
+          left: 3%;
+          top: -22%;
+      }
+      
+      .split-text {
+        text-decoration: underline 8px;
+        transition: none; 
+      }
+    .split-text:hover {
+        color: inherit;
+        -webkit-text-stroke: 0;
+        text-decoration: underline 8px;
+    }
+
+    .page2{
+        height: 50vh;
+        justify-content: center;
+
+    }
+    
+    .page2 .page2-video{
+        position: relative;
+        height: 90%;
+        width:100% ;
+    }
+    
+
+    
+    .page2-video img{
+        transform: scale(1.2);
+        height: 100%;
+    }
+
+
+    
+    .page3-container{
+        padding: 5vw 6VW;
+    }
+    
+    .page3-topheading-container{
+        justify-content: flex-start;
+    }
+    
+    .page3-top-heading{
+        width: 100%;
+        padding: 6.5vw 0vw;
+        border-bottom: 1.6px solid #ffffff96;
+    }
+    
+    .page3-heading-text h1{
+        font-size: 9.5vw;
+    }
+    
+    .page3-heading-text h1::before{
+        font-size: 5vw;
+        top: -90% ;
+        left: 0%;
+    }
+    
+    .page3-main-content{
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .page3-text-div{
+        height: 15%;
+    }
+    
+    
+    .page3-text-div h2{
+        font-size: 6vw;
+    }
+    
+    .page3-text-div h5{
+        font-size: 14.6px;
+    }
+    
+    .page3-image-div{
+        height: 80vh;
+        width: 100%;
+    }
+
+    .page3-image-div:nth-child(3),
+    .page3-image-div:nth-child(4),
+    .page3-image-div:nth-child(8){
+        display: none;
+    }
+    
+    .page3-image-div:nth-child(1){
+        height: 80vh;
+        width: 100%;
+    }
+    .page3-image-div:nth-child(4){
+        height: 80vh;
+        width: 100%;
+    }
+    .page3-image-div:nth-child(7){
+        height: 80vh;
+        width: 100%;
+    }
+    
+    .page3-circle{
+        display: none;
+    }
+    
+
+
+
+}
 
 
 

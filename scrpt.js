@@ -278,3 +278,4 @@ textSix.addEventListener("mouseleave", function(){
 }
 
 textAnimation()
+
