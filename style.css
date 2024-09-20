@@ -669,7 +669,7 @@ nav{
     font-size: 7.5vw;
     display: flex;
     align-items: center;
-    font-weight: 900;
+    font-weight: 100;
     gap: 2px;
 }
 
@@ -1100,6 +1100,7 @@ nav{
 
 .page6-heading-text h1{
     font-size: 9vw;
+    font-weight: 900;
 }
 
 
