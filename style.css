@@ -452,15 +452,30 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10vw 0;
 }
 
 .projects-button{
+    transition: all ease-out .3s;
+    height: 320px;
+    width: 320px;
+    background-color: #ffa63d;
+    border-radius: 50%;
+    display: flex;
+    font-size: 14.4px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     
+}
+
+.projects-button:hover{
+    scale: 0.9;
 }
 
 
 .page4{
-    /* height: 100vh; */
     width: 100%;
     background-color: #151515;
     display: flex;
@@ -596,7 +611,7 @@ nav{
     display: flex;
     align-items: center;
     white-space: nowrap;
-    line-height: 115px;
+    line-height: 8.4vw;
     animation: scroll 10s linear infinite;
 }
 
@@ -653,7 +668,7 @@ nav{
     font-size: 7.5vw;
     display: flex;
     align-items: center;
-    font-weight: 100;
+    font-weight: 900;
     gap: 2px;
 }
 
@@ -938,8 +953,213 @@ nav{
         display: none;
     }
     
+    
+.page3-projects-button{
+    padding: 18vw 0;
+}
+
+.projects-button{
+    height: 240px;
+    width: 240px;
+}
+
+.projects-button:hover{
+    scale: 1;
+}
+
+.projects-button:active{
+    scale: 0.9;
+}
+
+.page4{
+    justify-content: flex-start;
+}
+
+.page4-container{
+    width: 100%;
+    padding: 2vw 5vw;
+}
+
+.page4-top-heading{
+    padding: 7vw 0vw;
+    border-bottom: 1.6px solid #fff;
+}
+
+.page4-heading-text h1{
+    font-size: 9vw;
+}
+
+.page4-heading-text h1::before{
+    font-size: 5vw;
+    left: 0%;
+    top: -100%;
+}
+
+.about-discription{
+    padding: 12vw 0;
+}
+
+.about-discription p{
+    font-size: 5.7vw;
+}
+
+.page4-image{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 12vw;
+}
+
+.page4-img-container{
+    height: 70%;
+    width: 100%;
+
+}
+
+.page4-img-text{
+    gap: 20px;
+    width: 84%;
+    padding: 0 0px;
+}
+
+.page4-img-text p{
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.page4-awords{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    height: 70vh;
+    padding: 12vw 4vw;
+    margin-top: 4vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.page4-awords-text{
+    display: flex;
+    justify-content: space-between;
+}
 
 
+.page4-awords-text h3{
+    width: 35%;
+    font-size: 14px;
+}
+
+.page4-awords-text h4{
+    width: 55%;
+    font-size: 14px;
+}
+
+.page4-emptyContainer{
+    height: 15vw;
+    border-bottom: 1.4px solid #fff;
+}
+
+.page5{
+    height: fit-content;
+}
+
+.infinite-scroll{
+    padding: 14vw 0 ;
+
+}
+
+.infinty-text{
+    line-height: 11vw;
+}
+
+.infinty-text h1{
+    font-size: 10vw;
+}
+
+
+.page6{
+    height: fit-content;
+    justify-content: flex-start;
+}
+
+.page6-container{
+    width: 100%;
+    padding: 1vw 5vw;
+}
+
+.page6-top-heading{
+    width: 100%;
+    padding: 8vw 0vw;
+}
+
+.page6-heading-text{
+    height: 40px;
+}
+
+.page6-heading-text h1{
+    font-size: 9vw;
+}
+
+
+.page6-top-heading svg{
+    margin-left: 3vw;
+}
+
+
+
+.page6-heading-text h1::before{
+    font-size: 5vw;
+    left: 0%;
+    top: -100%;
+}
+
+
+
+.page6-heading-text svg{
+    height: 6vw;
+}
+
+
+
+.page6-center{
+    padding: 16vw 0vw;
+}
+
+.page6-center-container{
+    flex-direction: column;
+    gap: 6vw;
+}
+
+.page6-center-text{
+    width: 32%;
+}
+
+.page6-center-text h4{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+
+
+.page6-center-text h3{
+    height: 28px;
+    line-height: 27px;
+}
+
+.page6-center-text h5{
+    width: 200%;
+}
+
+.page6-center-text h3:hover div{
+    transform: none;
+
+}
+
+.cursor{
+    display: none;
+}
 
 }
 

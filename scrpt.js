@@ -161,14 +161,15 @@ function videoAnimation(){
     });
     
 }
-
 videoAnimation()
 
 function locomotive(){
     gsap.registerPlugin(ScrollTrigger);
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector("main"),
-      smooth: true
+      smooth: true,
+      smoothMobile: true, 
+      inertia: 0.3,
     });
     locoScroll.on("scroll", ScrollTrigger.update);
     
@@ -186,9 +187,7 @@ function locomotive(){
     ScrollTrigger.refresh();
     
 }
-
 locomotive()
-
 
 function magnetEffect(){
     document.addEventListener('DOMContentLoaded', () => {
@@ -215,9 +214,6 @@ function magnetEffect(){
     });
     
 }
-
-magnetEffect()
-
 
 function textAnimation(){
     let textSix = document.querySelector(".page6-heading-text")
@@ -277,5 +273,14 @@ textSix.addEventListener("mouseleave", function(){
 })
 }
 
-textAnimation()
+function inSmallerDevices(){
+    if (window.innerWidth >= 768) {
+        magnetEffect() 
+        textAnimation()
+    }
+}
+inSmallerDevices()
+
+
+
 
