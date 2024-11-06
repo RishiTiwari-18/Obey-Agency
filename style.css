@@ -2,19 +2,19 @@
 
 @font-face {
     font-family:font1 ;
-    src: url(./font/plain-light-webfont.woff);
+    src: url(../Obey-Agency/font/plain-light-webfont.woff);
 }
 @font-face {
     font-family:font2 ;
-    src: url(./font/plain-regular-webfont.woff);
+    src: url(../Obey-Agency/font/plain-regular-webfont.woff);
 }
 @font-face {
     font-family:font3 ;
-    src: url(./font/silkserif-lightitalic-webfont.woff);
+    src: url(../Obey-Agency/font/silkserif-lightitalic-webfont.woff);
 }
 @font-face {
     font-family:font4 ;
-    src: url(./font/silkserif-regularitalic-webfont.woff);
+    src: url(../Obey-Agency/font/silkserif-regularitalic-webfont.woff);
 }
 
 * {
